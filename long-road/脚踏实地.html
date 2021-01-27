@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NIO,BIO,AIO | kikfan</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+    <meta name="description" content="kikfan">
+    
+    <link rel="preload" href="/assets/css/2.styles.051e8285.css" as="style"><link rel="preload" href="/assets/js/app.7ba23871.js" as="script"><link rel="preload" href="/assets/js/4.292afecb.js" as="script"><link rel="preload" href="/assets/js/90.a4c9c606.js" as="script"><link rel="prefetch" href="/assets/js/0.71ac8a33.js"><link rel="prefetch" href="/assets/js/1.73a5aad3.js"><link rel="prefetch" href="/assets/js/10.7d07b3d9.js"><link rel="prefetch" href="/assets/js/100.b78e7802.js"><link rel="prefetch" href="/assets/js/101.eaaca020.js"><link rel="prefetch" href="/assets/js/102.e9fc2421.js"><link rel="prefetch" href="/assets/js/103.84b8256b.js"><link rel="prefetch" href="/assets/js/104.7abfc617.js"><link rel="prefetch" href="/assets/js/105.1ec4b862.js"><link rel="prefetch" href="/assets/js/106.4dc5c980.js"><link rel="prefetch" href="/assets/js/107.f0c7db52.js"><link rel="prefetch" href="/assets/js/108.08f59a3c.js"><link rel="prefetch" href="/assets/js/109.69c05321.js"><link rel="prefetch" href="/assets/js/11.00e72e41.js"><link rel="prefetch" href="/assets/js/110.ad744d2f.js"><link rel="prefetch" href="/assets/js/111.671aa3c1.js"><link rel="prefetch" href="/assets/js/112.1c3d4a67.js"><link rel="prefetch" href="/assets/js/113.5a9cc600.js"><link rel="prefetch" href="/assets/js/114.53f104e5.js"><link rel="prefetch" href="/assets/js/115.fe4a33ef.js"><link rel="prefetch" href="/assets/js/116.fbaba654.js"><link rel="prefetch" href="/assets/js/117.4760778b.js"><link rel="prefetch" href="/assets/js/118.c363137e.js"><link rel="prefetch" href="/assets/js/119.40023660.js"><link rel="prefetch" href="/assets/js/12.9e171cb9.js"><link rel="prefetch" href="/assets/js/13.cd8fcd89.js"><link rel="prefetch" href="/assets/js/14.90383661.js"><link rel="prefetch" href="/assets/js/15.7983900e.js"><link rel="prefetch" href="/assets/js/16.c7356a60.js"><link rel="prefetch" href="/assets/js/17.9a1808e6.js"><link rel="prefetch" href="/assets/js/18.c5563e15.js"><link rel="prefetch" href="/assets/js/19.d7201705.js"><link rel="prefetch" href="/assets/js/20.5e56f1c1.js"><link rel="prefetch" href="/assets/js/21.c8edd285.js"><link rel="prefetch" href="/assets/js/22.b307b325.js"><link rel="prefetch" href="/assets/js/23.d86fefa7.js"><link rel="prefetch" href="/assets/js/24.3090c415.js"><link rel="prefetch" href="/assets/js/25.3f243d05.js"><link rel="prefetch" href="/assets/js/26.679cdac7.js"><link rel="prefetch" href="/assets/js/27.14ec9c1d.js"><link rel="prefetch" href="/assets/js/28.00888fd6.js"><link rel="prefetch" href="/assets/js/29.7e638fe3.js"><link rel="prefetch" href="/assets/js/30.11c16ad0.js"><link rel="prefetch" href="/assets/js/31.98f65567.js"><link rel="prefetch" href="/assets/js/32.2b207cba.js"><link rel="prefetch" href="/assets/js/33.734b44a6.js"><link rel="prefetch" href="/assets/js/34.98cba678.js"><link rel="prefetch" href="/assets/js/35.85322c82.js"><link rel="prefetch" href="/assets/js/36.0dfdb6de.js"><link rel="prefetch" href="/assets/js/37.e01d1d82.js"><link rel="prefetch" href="/assets/js/38.bf77261b.js"><link rel="prefetch" href="/assets/js/39.82242074.js"><link rel="prefetch" href="/assets/js/40.ce99b46f.js"><link rel="prefetch" href="/assets/js/41.f6167dff.js"><link rel="prefetch" href="/assets/js/42.0371d905.js"><link rel="prefetch" href="/assets/js/43.e4a7aef7.js"><link rel="prefetch" href="/assets/js/44.e9827259.js"><link rel="prefetch" href="/assets/js/45.39a67c1d.js"><link rel="prefetch" href="/assets/js/46.8ec6eea4.js"><link rel="prefetch" href="/assets/js/47.2501299d.js"><link rel="prefetch" href="/assets/js/48.8b8e2c1c.js"><link rel="prefetch" href="/assets/js/49.73987abd.js"><link rel="prefetch" href="/assets/js/5.77eb41a0.js"><link rel="prefetch" href="/assets/js/50.5da0bdc9.js"><link rel="prefetch" href="/assets/js/51.d7193f1b.js"><link rel="prefetch" href="/assets/js/52.838622e3.js"><link rel="prefetch" href="/assets/js/53.c55edd2b.js"><link rel="prefetch" href="/assets/js/54.a7498da9.js"><link rel="prefetch" href="/assets/js/55.d1c1d531.js"><link rel="prefetch" href="/assets/js/56.767962cf.js"><link rel="prefetch" href="/assets/js/57.bd724fda.js"><link rel="prefetch" href="/assets/js/58.e30ad4aa.js"><link rel="prefetch" href="/assets/js/59.fb235a6d.js"><link rel="prefetch" href="/assets/js/6.38a878ba.js"><link rel="prefetch" href="/assets/js/60.9b1d42be.js"><link rel="prefetch" href="/assets/js/61.d7487a62.js"><link rel="prefetch" href="/assets/js/62.43b6272f.js"><link rel="prefetch" href="/assets/js/63.f2d44dcd.js"><link rel="prefetch" href="/assets/js/64.8499a30e.js"><link rel="prefetch" href="/assets/js/65.3e6c1529.js"><link rel="prefetch" href="/assets/js/66.592e86f2.js"><link rel="prefetch" href="/assets/js/67.e445e4d9.js"><link rel="prefetch" href="/assets/js/68.dcd7d305.js"><link rel="prefetch" href="/assets/js/69.13b6c188.js"><link rel="prefetch" href="/assets/js/7.ec683bf8.js"><link rel="prefetch" href="/assets/js/70.b869aa03.js"><link rel="prefetch" href="/assets/js/71.ec2b9534.js"><link rel="prefetch" href="/assets/js/72.4abbe0f6.js"><link rel="prefetch" href="/assets/js/73.520653fd.js"><link rel="prefetch" href="/assets/js/74.741d03bf.js"><link rel="prefetch" href="/assets/js/75.f8fa8f39.js"><link rel="prefetch" href="/assets/js/76.b0898d02.js"><link rel="prefetch" href="/assets/js/77.7b963dd5.js"><link rel="prefetch" href="/assets/js/78.ad8cc9a2.js"><link rel="prefetch" href="/assets/js/79.c7e1ea38.js"><link rel="prefetch" href="/assets/js/8.8d893786.js"><link rel="prefetch" href="/assets/js/80.eb0ad1ef.js"><link rel="prefetch" href="/assets/js/81.e0c19f99.js"><link rel="prefetch" href="/assets/js/82.6cc53328.js"><link rel="prefetch" href="/assets/js/83.ff50c6c3.js"><link rel="prefetch" href="/assets/js/84.b162976e.js"><link rel="prefetch" href="/assets/js/85.0b2daa96.js"><link rel="prefetch" href="/assets/js/86.05573bf9.js"><link rel="prefetch" href="/assets/js/87.7387cbea.js"><link rel="prefetch" href="/assets/js/88.82f7c592.js"><link rel="prefetch" href="/assets/js/89.a3454ab0.js"><link rel="prefetch" href="/assets/js/9.a76687b6.js"><link rel="prefetch" href="/assets/js/91.9eb2d87b.js"><link rel="prefetch" href="/assets/js/92.e1c96baa.js"><link rel="prefetch" href="/assets/js/93.c3c1d09b.js"><link rel="prefetch" href="/assets/js/94.a4eae7c6.js"><link rel="prefetch" href="/assets/js/95.b4f4169a.js"><link rel="prefetch" href="/assets/js/96.9d93198c.js"><link rel="prefetch" href="/assets/js/97.ee4e7ec3.js"><link rel="prefetch" href="/assets/js/98.7638cc88.js"><link rel="prefetch" href="/assets/js/99.5aa73200.js">
+    <link rel="stylesheet" href="/assets/css/2.styles.051e8285.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">kikfan</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/idea/" class="nav-link">
+  IDEA
+</a></div><div class="nav-item"><a href="/devops/" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  Web
+</a></div><div class="nav-item"><a href="/curiousness/" class="nav-link">
+  好奇尚异
+</a></div><div class="nav-item"><a href="/long-road/" class="nav-link router-link-active">
+  道阻且长
+</a></div><div class="nav-item"><a href="/step-back/" class="nav-link">
+  海阔天空
+</a></div><div class="nav-item"><a href="/experience/" class="nav-link">
+  吃堑长智
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link">
+  Tools
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/idea/" class="nav-link">
+  IDEA
+</a></div><div class="nav-item"><a href="/devops/" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  Web
+</a></div><div class="nav-item"><a href="/curiousness/" class="nav-link">
+  好奇尚异
+</a></div><div class="nav-item"><a href="/long-road/" class="nav-link router-link-active">
+  道阻且长
+</a></div><div class="nav-item"><a href="/step-back/" class="nav-link">
+  海阔天空
+</a></div><div class="nav-item"><a href="/experience/" class="nav-link">
+  吃堑长智
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link">
+  Tools
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>道阻且长</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/long-road/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/long-road/0126.html" class="sidebar-link">0126</a></li><li><a href="/long-road/0127.html" class="sidebar-link">0127</a></li><li><a href="/long-road/LeetCode .html" class="sidebar-link">LeetCode </a></li><li><a href="/long-road/SQL战leetcode.html" class="sidebar-link">SQL战leetcode</a></li><li><a href="/long-road/TCP-IP网络.html" class="sidebar-link">TCP-IP网络</a></li><li><a href="/long-road/shell学习.html" class="sidebar-link">shell学习</a></li><li><a href="/long-road/shell编程学习.html" class="sidebar-link">shell编程学习</a></li><li><a href="/long-road/密码与素数.html" class="sidebar-link">密码与素数</a></li><li><a href="/long-road/排序算法.html" class="sidebar-link">排序算法</a></li><li><a href="/long-road/系统性学习.html" class="sidebar-link">系统性学习</a></li><li><a href="/long-road/脚踏实地.html" class="active sidebar-link">脚踏实地</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/long-road/脚踏实地.html#nio-bio-aio" class="sidebar-link">NIO,BIO,AIO</a></li><li class="sidebar-sub-header"><a href="/long-road/脚踏实地.html#docker" class="sidebar-link">Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/long-road/脚踏实地.html#创建用户" class="sidebar-link">创建用户</a></li><li class="sidebar-sub-header"><a href="/long-road/脚踏实地.html#docker网络" class="sidebar-link">Docker网络</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="nio-bio-aio"><a href="#nio-bio-aio" class="header-anchor">#</a> NIO,BIO,AIO</h2> <ul><li>同步(synchronous) IO和异步(asynchronous) IO</li> <li>阻塞(blocking) IO和非阻塞(non-blocking)IO</li> <li>同步阻塞(blocking-IO)简称BIO</li> <li>同步非阻塞(non-blocking-IO)简称NIO</li> <li>异步非阻塞(synchronous-non-blocking-IO)简称AIO</li></ul> <h2 id="docker"><a href="#docker" class="header-anchor">#</a> Docker</h2> <h3 id="创建用户"><a href="#创建用户" class="header-anchor">#</a> 创建用户</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>RUN <span class="token function">groupadd</span> -r redis <span class="token operator">&amp;&amp;</span> <span class="token function">useradd</span> -r -g redis redis
+<span class="token environment constant">USER</span> redis
+RUN <span class="token punctuation">[</span> <span class="token string">&quot;redis-server&quot;</span> <span class="token punctuation">]</span>
+</code></pre></div><h3 id="docker网络"><a href="#docker网络" class="header-anchor">#</a> Docker网络</h3> <ul><li>docker inspect -f 指令</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker inspect -f '{{.Config.Image}}' risk-admin</span>
+harbor.zegobird-erp.com/risk-dev/risk-admin-img:latest
+<span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker inspect -f '{{.Config.Image}}' risk-admin |awk -F &quot;:&quot; '{print $1}'</span>
+harbor.zegobird-erp.com/risk-dev/risk-admin-img
+<span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker inspect -f '{{.Config.Image}}' risk-admin |awk -F &quot;:&quot; '{print $2}'</span>
+latest
+
+</code></pre></div><ul><li>获取git tag或者commit</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>    <span class="token function">git</span>  rev-parse --abbrev-ref HEAD <span class="token operator">|</span> <span class="token function">grep</span> -v HEAD <span class="token operator">||</span> <span class="token punctuation">\</span>
+    <span class="token function">git</span>  describe --exact-match HEAD <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null <span class="token operator">||</span> <span class="token punctuation">\</span>
+    <span class="token function">git</span>  rev-parse --short HEAD
+</code></pre></div><ul><li>网络配置详细</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>用户使用 --net<span class="token operator">=</span>none 后，可以自行配置网络，让容器达到跟平常一样具有访问网络的权限。通过这个过程，可以了解 Docker 配置网络的细节。
+
+首先，启动一个 /bin/bash 容器，指定 --net<span class="token operator">=</span>none 参数。
+
+$ docker run -i -t --rm --net<span class="token operator">=</span>none base /bin/bash
+root@63f36fc01b5f:/<span class="token comment">#</span>
+在本地主机查找容器的进程 id，并为它创建网络命名空间。
+
+$ docker inspect -f <span class="token string">'{{.State.Pid}}'</span> 63f36fc01b5f
+<span class="token number">2778</span>
+$ <span class="token assign-left variable">pid</span><span class="token operator">=</span><span class="token number">2778</span>
+$ <span class="token function">sudo</span> <span class="token function">mkdir</span> -p /var/run/netns
+$ <span class="token function">sudo</span> <span class="token function">ln</span> -s /proc/<span class="token variable">$pid</span>/ns/net /var/run/netns/<span class="token variable">$pid</span>
+检查桥接网卡的 IP 和子网掩码信息。
+
+$ <span class="token function">ip</span> addr show docker0
+<span class="token number">21</span>: docker0: <span class="token punctuation">..</span>.
+inet <span class="token number">172.17</span>.42.1/16 scope global docker0
+<span class="token punctuation">..</span>.
+创建一对 “veth pair” 接口 A 和 B，绑定 A 到网桥 docker0，并启用它
+
+$ <span class="token function">sudo</span> <span class="token function">ip</span> <span class="token function">link</span> <span class="token function">add</span> A <span class="token builtin class-name">type</span> veth peer name B
+$ <span class="token function">sudo</span> brctl addif docker0 A
+$ <span class="token function">sudo</span> <span class="token function">ip</span> <span class="token function">link</span> <span class="token builtin class-name">set</span> A up
+将B放到容器的网络命名空间，命名为 eth0，启动它并配置一个可用 IP（桥接网段）和默认网关。
+
+$ <span class="token function">sudo</span> <span class="token function">ip</span> <span class="token function">link</span> <span class="token builtin class-name">set</span> B netns <span class="token variable">$pid</span>
+$ <span class="token function">sudo</span> <span class="token function">ip</span> netns <span class="token builtin class-name">exec</span> <span class="token variable">$pid</span> <span class="token function">ip</span> <span class="token function">link</span> <span class="token builtin class-name">set</span> dev B name eth0
+$ <span class="token function">sudo</span> <span class="token function">ip</span> netns <span class="token builtin class-name">exec</span> <span class="token variable">$pid</span> <span class="token function">ip</span> <span class="token function">link</span> <span class="token builtin class-name">set</span> eth0 up
+$ <span class="token function">sudo</span> <span class="token function">ip</span> netns <span class="token builtin class-name">exec</span> <span class="token variable">$pid</span> <span class="token function">ip</span> addr <span class="token function">add</span> <span class="token number">172.17</span>.42.99/16 dev eth0
+$ <span class="token function">sudo</span> <span class="token function">ip</span> netns <span class="token builtin class-name">exec</span> <span class="token variable">$pid</span> <span class="token function">ip</span> route <span class="token function">add</span> default via <span class="token number">172.17</span>.42.1
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后编辑时间:</span> <span class="time">1/20/2021, 6:38:06 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/long-road/系统性学习.html" class="prev">
+        系统性学习
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.7ba23871.js" defer></script><script src="/assets/js/4.292afecb.js" defer></script><script src="/assets/js/90.a4c9c606.js" defer></script>
+  </body>
+</html>

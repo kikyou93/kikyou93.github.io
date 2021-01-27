@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker MongoDb 设置用户名和密码 | kikfan</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+    <meta name="description" content="kikfan">
+    
+    <link rel="preload" href="/assets/css/2.styles.051e8285.css" as="style"><link rel="preload" href="/assets/js/app.7ba23871.js" as="script"><link rel="preload" href="/assets/js/4.292afecb.js" as="script"><link rel="preload" href="/assets/js/34.98cba678.js" as="script"><link rel="prefetch" href="/assets/js/0.71ac8a33.js"><link rel="prefetch" href="/assets/js/1.73a5aad3.js"><link rel="prefetch" href="/assets/js/10.7d07b3d9.js"><link rel="prefetch" href="/assets/js/100.b78e7802.js"><link rel="prefetch" href="/assets/js/101.eaaca020.js"><link rel="prefetch" href="/assets/js/102.e9fc2421.js"><link rel="prefetch" href="/assets/js/103.84b8256b.js"><link rel="prefetch" href="/assets/js/104.7abfc617.js"><link rel="prefetch" href="/assets/js/105.1ec4b862.js"><link rel="prefetch" href="/assets/js/106.4dc5c980.js"><link rel="prefetch" href="/assets/js/107.f0c7db52.js"><link rel="prefetch" href="/assets/js/108.08f59a3c.js"><link rel="prefetch" href="/assets/js/109.69c05321.js"><link rel="prefetch" href="/assets/js/11.00e72e41.js"><link rel="prefetch" href="/assets/js/110.ad744d2f.js"><link rel="prefetch" href="/assets/js/111.671aa3c1.js"><link rel="prefetch" href="/assets/js/112.1c3d4a67.js"><link rel="prefetch" href="/assets/js/113.5a9cc600.js"><link rel="prefetch" href="/assets/js/114.53f104e5.js"><link rel="prefetch" href="/assets/js/115.fe4a33ef.js"><link rel="prefetch" href="/assets/js/116.fbaba654.js"><link rel="prefetch" href="/assets/js/117.4760778b.js"><link rel="prefetch" href="/assets/js/118.c363137e.js"><link rel="prefetch" href="/assets/js/119.40023660.js"><link rel="prefetch" href="/assets/js/12.9e171cb9.js"><link rel="prefetch" href="/assets/js/13.cd8fcd89.js"><link rel="prefetch" href="/assets/js/14.90383661.js"><link rel="prefetch" href="/assets/js/15.7983900e.js"><link rel="prefetch" href="/assets/js/16.c7356a60.js"><link rel="prefetch" href="/assets/js/17.9a1808e6.js"><link rel="prefetch" href="/assets/js/18.c5563e15.js"><link rel="prefetch" href="/assets/js/19.d7201705.js"><link rel="prefetch" href="/assets/js/20.5e56f1c1.js"><link rel="prefetch" href="/assets/js/21.c8edd285.js"><link rel="prefetch" href="/assets/js/22.b307b325.js"><link rel="prefetch" href="/assets/js/23.d86fefa7.js"><link rel="prefetch" href="/assets/js/24.3090c415.js"><link rel="prefetch" href="/assets/js/25.3f243d05.js"><link rel="prefetch" href="/assets/js/26.679cdac7.js"><link rel="prefetch" href="/assets/js/27.14ec9c1d.js"><link rel="prefetch" href="/assets/js/28.00888fd6.js"><link rel="prefetch" href="/assets/js/29.7e638fe3.js"><link rel="prefetch" href="/assets/js/30.11c16ad0.js"><link rel="prefetch" href="/assets/js/31.98f65567.js"><link rel="prefetch" href="/assets/js/32.2b207cba.js"><link rel="prefetch" href="/assets/js/33.734b44a6.js"><link rel="prefetch" href="/assets/js/35.85322c82.js"><link rel="prefetch" href="/assets/js/36.0dfdb6de.js"><link rel="prefetch" href="/assets/js/37.e01d1d82.js"><link rel="prefetch" href="/assets/js/38.bf77261b.js"><link rel="prefetch" href="/assets/js/39.82242074.js"><link rel="prefetch" href="/assets/js/40.ce99b46f.js"><link rel="prefetch" href="/assets/js/41.f6167dff.js"><link rel="prefetch" href="/assets/js/42.0371d905.js"><link rel="prefetch" href="/assets/js/43.e4a7aef7.js"><link rel="prefetch" href="/assets/js/44.e9827259.js"><link rel="prefetch" href="/assets/js/45.39a67c1d.js"><link rel="prefetch" href="/assets/js/46.8ec6eea4.js"><link rel="prefetch" href="/assets/js/47.2501299d.js"><link rel="prefetch" href="/assets/js/48.8b8e2c1c.js"><link rel="prefetch" href="/assets/js/49.73987abd.js"><link rel="prefetch" href="/assets/js/5.77eb41a0.js"><link rel="prefetch" href="/assets/js/50.5da0bdc9.js"><link rel="prefetch" href="/assets/js/51.d7193f1b.js"><link rel="prefetch" href="/assets/js/52.838622e3.js"><link rel="prefetch" href="/assets/js/53.c55edd2b.js"><link rel="prefetch" href="/assets/js/54.a7498da9.js"><link rel="prefetch" href="/assets/js/55.d1c1d531.js"><link rel="prefetch" href="/assets/js/56.767962cf.js"><link rel="prefetch" href="/assets/js/57.bd724fda.js"><link rel="prefetch" href="/assets/js/58.e30ad4aa.js"><link rel="prefetch" href="/assets/js/59.fb235a6d.js"><link rel="prefetch" href="/assets/js/6.38a878ba.js"><link rel="prefetch" href="/assets/js/60.9b1d42be.js"><link rel="prefetch" href="/assets/js/61.d7487a62.js"><link rel="prefetch" href="/assets/js/62.43b6272f.js"><link rel="prefetch" href="/assets/js/63.f2d44dcd.js"><link rel="prefetch" href="/assets/js/64.8499a30e.js"><link rel="prefetch" href="/assets/js/65.3e6c1529.js"><link rel="prefetch" href="/assets/js/66.592e86f2.js"><link rel="prefetch" href="/assets/js/67.e445e4d9.js"><link rel="prefetch" href="/assets/js/68.dcd7d305.js"><link rel="prefetch" href="/assets/js/69.13b6c188.js"><link rel="prefetch" href="/assets/js/7.ec683bf8.js"><link rel="prefetch" href="/assets/js/70.b869aa03.js"><link rel="prefetch" href="/assets/js/71.ec2b9534.js"><link rel="prefetch" href="/assets/js/72.4abbe0f6.js"><link rel="prefetch" href="/assets/js/73.520653fd.js"><link rel="prefetch" href="/assets/js/74.741d03bf.js"><link rel="prefetch" href="/assets/js/75.f8fa8f39.js"><link rel="prefetch" href="/assets/js/76.b0898d02.js"><link rel="prefetch" href="/assets/js/77.7b963dd5.js"><link rel="prefetch" href="/assets/js/78.ad8cc9a2.js"><link rel="prefetch" href="/assets/js/79.c7e1ea38.js"><link rel="prefetch" href="/assets/js/8.8d893786.js"><link rel="prefetch" href="/assets/js/80.eb0ad1ef.js"><link rel="prefetch" href="/assets/js/81.e0c19f99.js"><link rel="prefetch" href="/assets/js/82.6cc53328.js"><link rel="prefetch" href="/assets/js/83.ff50c6c3.js"><link rel="prefetch" href="/assets/js/84.b162976e.js"><link rel="prefetch" href="/assets/js/85.0b2daa96.js"><link rel="prefetch" href="/assets/js/86.05573bf9.js"><link rel="prefetch" href="/assets/js/87.7387cbea.js"><link rel="prefetch" href="/assets/js/88.82f7c592.js"><link rel="prefetch" href="/assets/js/89.a3454ab0.js"><link rel="prefetch" href="/assets/js/9.a76687b6.js"><link rel="prefetch" href="/assets/js/90.a4c9c606.js"><link rel="prefetch" href="/assets/js/91.9eb2d87b.js"><link rel="prefetch" href="/assets/js/92.e1c96baa.js"><link rel="prefetch" href="/assets/js/93.c3c1d09b.js"><link rel="prefetch" href="/assets/js/94.a4eae7c6.js"><link rel="prefetch" href="/assets/js/95.b4f4169a.js"><link rel="prefetch" href="/assets/js/96.9d93198c.js"><link rel="prefetch" href="/assets/js/97.ee4e7ec3.js"><link rel="prefetch" href="/assets/js/98.7638cc88.js"><link rel="prefetch" href="/assets/js/99.5aa73200.js">
+    <link rel="stylesheet" href="/assets/css/2.styles.051e8285.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">kikfan</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/idea/" class="nav-link">
+  IDEA
+</a></div><div class="nav-item"><a href="/devops/" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">
+  Web
+</a></div><div class="nav-item"><a href="/curiousness/" class="nav-link">
+  好奇尚异
+</a></div><div class="nav-item"><a href="/long-road/" class="nav-link">
+  道阻且长
+</a></div><div class="nav-item"><a href="/step-back/" class="nav-link">
+  海阔天空
+</a></div><div class="nav-item"><a href="/experience/" class="nav-link">
+  吃堑长智
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link">
+  Tools
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/idea/" class="nav-link">
+  IDEA
+</a></div><div class="nav-item"><a href="/devops/" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">
+  Web
+</a></div><div class="nav-item"><a href="/curiousness/" class="nav-link">
+  好奇尚异
+</a></div><div class="nav-item"><a href="/long-road/" class="nav-link">
+  道阻且长
+</a></div><div class="nav-item"><a href="/step-back/" class="nav-link">
+  海阔天空
+</a></div><div class="nav-item"><a href="/experience/" class="nav-link">
+  吃堑长智
+</a></div><div class="nav-item"><a href="/tools/" class="nav-link">
+  Tools
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Web</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/web/CryptoJs 加解密.html" class="sidebar-link">CryptoJs 加解密</a></li><li><a href="/web/ECMAscript.html" class="sidebar-link">ECMAscript</a></li><li><a href="/web/Egg 更加优雅的 Controller 数据返回.html" class="sidebar-link">Egg 更加优雅的 Controller 数据返回</a></li><li><a href="/web/Egg 集成 Apollo.html" class="sidebar-link">Egg 集成 Apollo</a></li><li><a href="/web/Google V8.html" class="sidebar-link">Google V8</a></li><li><a href="/web/JS 数组整理.html" class="sidebar-link">JS 数组整理</a></li><li><a href="/web/Js 事件机制.html" class="sidebar-link">Js 事件机制</a></li><li><a href="/web/Js 作用域.html" class="sidebar-link">Js 作用域</a></li><li><a href="/web/Js 闭包 .html" class="sidebar-link">Js 闭包 </a></li><li><a href="/web/Lodash.html" class="sidebar-link">Lodash</a></li><li><a href="/web/MongoDB.html" aria-current="page" class="active sidebar-link">MongoDB</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/MongoDB.html#聚合查询" class="sidebar-link">聚合查询</a></li><li class="sidebar-sub-header"><a href="/web/MongoDB.html#执行计划" class="sidebar-link">执行计划</a></li></ul></li><li><a href="/web/Mongoose.html" class="sidebar-link">Mongoose</a></li><li><a href="/web/Node 转发文件上传.html" class="sidebar-link">Node 转发文件上传</a></li><li><a href="/web/Node.html" class="sidebar-link">Node</a></li><li><a href="/web/Node.js 知识点整理.html" class="sidebar-link">Node.js 知识点整理</a></li><li><a href="/web/TypeScript.html" class="sidebar-link">TypeScript</a></li><li><a href="/web/d8.html" class="sidebar-link">d8</a></li><li><a href="/web/egg.html" class="sidebar-link">egg</a></li><li><a href="/web/vue 整理.html" class="sidebar-link">vue 整理</a></li><li><a href="/web/代码风格.html" class="sidebar-link">代码风格</a></li><li><a href="/web/前后端 接口验签.html" class="sidebar-link">前后端 接口验签</a></li><li><a href="/web/简易的敏感词处理.html" class="sidebar-link">简易的敏感词处理</a></li><li><a href="/web/自动导出 JS 模块.html" class="sidebar-link">自动导出 JS 模块</a></li><li><a href="/web/项目文件清理.html" class="sidebar-link">项目文件清理</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="docker-mongodb-设置用户名和密码"><a href="#docker-mongodb-设置用户名和密码" class="header-anchor">#</a> Docker MongoDb 设置用户名和密码</h3> <p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAwADADASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAABAACAwUBBv/EADAQAAIBAwIDBgYBBQAAAAAAAAECAwAEERIhEzFRMkFxgZGhBRQiYbHRI0JScsHh/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIBAP/EAB8RAAMAAgEFAQAAAAAAAAAAAAABAhESEwMEITFBUf/aAAwDAQACEQMRAD8A+lqjuqIXchVUZJPdWdzMIIHlIzpGQOp6UThGRdd22tsZK5+lfL91FWp9mpZPZb+OaBltTI7HZWWNseuMUaV57UN/PcFT2AqhgNv6iR1pKyTzZaCFWTuZ30g+GxqvzLiTgmFvmOfDyNx1z0onVZzgrCGW8qzQqyujnkxQ5Ge+t65JN1ZSNcNbpwm3kCPqI+/IV1FYMoZTkHcGnTJAXRMt2ka5KwjW3+XcPTVUuRxLaVFOGdCBn7ismZ0urxNtTKsidSMY/I96uv0oNWc0em9PPw6q0RtC8clgIi3CJTQeo2xQLFI7K7jh1vKoRhxSpxkkYGfL3pesY7fvUDgcn96fULkMp7aP5x70Su54ZXggbHbFW+HFogtq7MzLGCM92MAjwq2pTtkk1nbKx+MyHB0rFz8cf99KxrBUVtkTeW3GVXRuHLGco2M+R+1Fs53ni1NGVI2JB2PhSb9wVjt8kGdtO3QDJ/GPOqBiLkRKMIqZPrt/uhu3L8CKVXshDc1Ibx76mGJ7IUeHOtCoO5G9TQvTPnXLuF9RHA/0NNOsbBAwLt/cdhTreHhJuxZj2j+qFfIvB4pXIj5jqvePT8UixY4khZsmJsAnng7j9eVbPU3K0Un/2Q==" alt="é²ç«æ
+ï¼æ´å£ç½©" style="zoom:150%;"></p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>MongoDb 对应的是一个库一个账号。重点 记笔记</p></div> <p>先创建 root 用户</p> <div class="language-js extra-class"><pre class="language-js"><code>use admin
+db<span class="token punctuation">.</span><span class="token function">createUser</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  user<span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+  pwd<span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+  roles<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>role<span class="token operator">:</span> <span class="token string">'userAdminAnyDatabase'</span><span class="token punctuation">,</span> db<span class="token operator">:</span> <span class="token string">'admin'</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>在创建特定数据库的密码</p> <div class="language-js extra-class"><pre class="language-js"><code>use test
+db<span class="token punctuation">.</span><span class="token function">createUser</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  user<span class="token operator">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span>
+  pwd<span class="token operator">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span>
+  roles<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>role<span class="token operator">:</span> <span class="token string">'readWrite'</span><span class="token punctuation">,</span> db<span class="token operator">:</span> <span class="token string">'test'</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>使用</p> <div class="language-js extra-class"><pre class="language-js"><code>use test
+db<span class="token punctuation">.</span><span class="token function">auth</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> pwd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>错误解决：如果出现以下错误</p> <div class="language-shell extra-class"><pre class="language-shell"><code>Error: couldn’t <span class="token function">add</span> user: Use of SCRAM-SHA-256 requires undigested passwords
+</code></pre></div></div> <p>则使用以下方式进行添加</p> <div class="language-shell extra-class"><pre class="language-shell"><code>db.createUser<span class="token punctuation">(</span><span class="token punctuation">{</span> 
+    user: <span class="token string">&quot;admin&quot;</span>, 
+    pwd: <span class="token string">&quot;xxx&quot;</span>, 
+    roles: <span class="token punctuation">[</span> <span class="token punctuation">{</span> role: <span class="token string">&quot;userAdminAnyDatabase&quot;</span>, db: <span class="token string">&quot;admin&quot;</span> <span class="token punctuation">}</span> <span class="token punctuation">]</span>, 
+    mechanisms <span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;SCRAM-SHA-1&quot;</span><span class="token punctuation">]</span> 
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="聚合查询"><a href="#聚合查询" class="header-anchor">#</a> 聚合查询</h2> <p>统计每天数据增长量</p> <div class="language-js extra-class"><pre class="language-js"><code>db<span class="token punctuation">.</span>nbindings<span class="token punctuation">.</span><span class="token function">aggregate</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>    $project <span class="token operator">:</span>  <span class="token punctuation">{</span>  day <span class="token operator">:</span>  <span class="token punctuation">{</span> $substr<span class="token operator">:</span>  <span class="token punctuation">[</span><span class="token string">&quot;$createdAt&quot;</span><span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token number">10</span><span class="token punctuation">]</span>  <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>    $group   <span class="token operator">:</span>  <span class="token punctuation">{</span>  _id <span class="token operator">:</span>  <span class="token string">&quot;$day&quot;</span><span class="token punctuation">,</span>   number <span class="token operator">:</span>  <span class="token punctuation">{</span>  $sum <span class="token operator">:</span>  <span class="token number">1</span>  <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>    $sort    <span class="token operator">:</span>  <span class="token punctuation">{</span>  _id <span class="token operator">:</span>  <span class="token operator">-</span><span class="token number">1</span>  <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="执行计划"><a href="#执行计划" class="header-anchor">#</a> 执行计划</h2> <div class="language-js extra-class"><pre class="language-js"><code>db<span class="token punctuation">.</span>juneonlinetimes<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>uid<span class="token operator">:</span> <span class="token string">'3123586'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">explain</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>执行上述语句，返回执行结果</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span> 
+    <span class="token string">&quot;queryPlanner&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;plannerVersion&quot;</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;namespace&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;egg_xgimi_careplus.juneonlinetimes&quot;</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;indexFilterSet&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;parsedQuery&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;uid&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;$eq&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;3123586&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;winningPlan&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;stage&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;COLLSCAN&quot;</span><span class="token punctuation">,</span> 
+            <span class="token string">&quot;filter&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;uid&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">&quot;$eq&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;3123586&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+            <span class="token string">&quot;direction&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;forward&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;rejectedPlans&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token string">&quot;ok&quot;</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span> 
+    <span class="token string">&quot;operationTime&quot;</span> <span class="token operator">:</span> <span class="token function">Timestamp</span><span class="token punctuation">(</span><span class="token number">1595901092</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token string">&quot;$clusterTime&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;clusterTime&quot;</span> <span class="token operator">:</span> <span class="token function">Timestamp</span><span class="token punctuation">(</span><span class="token number">1595901092</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;signature&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;hash&quot;</span> <span class="token operator">:</span> <span class="token function">BinData</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;6zlWZ/8Z/I4udbRi+PXS70QGpYI=&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token string">&quot;keyId&quot;</span> <span class="token operator">:</span> <span class="token function">NumberLong</span><span class="token punctuation">(</span><span class="token number">6836962738317557761</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><table><thead><tr><th>含义</th> <th>参数</th></tr></thead> <tbody><tr><td>plannerVersion</td> <td>查询计划版本</td></tr> <tr><td>namespace</td> <td>要查询的集合</td></tr> <tr><td>indexFilterSet</td> <td>是否使用索引</td></tr> <tr><td>parsedQuery</td> <td>查询条件，此处为 x = 1</td></tr> <tr><td>winningPlan</td> <td>最佳执行计划</td></tr> <tr><td>state</td> <td>查询方式，常见的有COLLSCAN/全表扫描、IXSCAN/索引扫描、FETCH/根据索引去检索文档、SHARD_MERGE/合并分片结果、IDHACK/针对_id进行查询</td></tr> <tr><td>filter</td> <td>过滤条件</td></tr> <tr><td>direction</td> <td>搜索方向</td></tr> <tr><td>rejectedPlans</td> <td>拒绝的执行计划</td></tr> <tr><td>serverInfo</td> <td>mongodb 服务器信息</td></tr></tbody></table> <p>将上方 表 添加索引之后再执行查询</p> <div class="language-js extra-class"><pre class="language-js"><code>db<span class="token punctuation">.</span>juneonlinetimes<span class="token punctuation">.</span><span class="token function">createIndex</span><span class="token punctuation">(</span><span class="token punctuation">{</span>uid<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span> 
+    <span class="token string">&quot;queryPlanner&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;plannerVersion&quot;</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;namespace&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;egg_xgimi_careplus.juneonlinetimes&quot;</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;indexFilterSet&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;parsedQuery&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;uid&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;$eq&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;3123586&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;winningPlan&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;stage&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;FETCH&quot;</span><span class="token punctuation">,</span> 
+            <span class="token string">&quot;inputStage&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;stage&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;IXSCAN&quot;</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;keyPattern&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">&quot;uid&quot;</span> <span class="token operator">:</span> <span class="token number">1.0</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;indexName&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;uid_1&quot;</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;isMultiKey&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;multiKeyPaths&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">&quot;uid&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;isUnique&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;isSparse&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;isPartial&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;indexVersion&quot;</span> <span class="token operator">:</span> <span class="token number">2.0</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;direction&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;forward&quot;</span><span class="token punctuation">,</span> 
+                <span class="token string">&quot;indexBounds&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">&quot;uid&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token string">&quot;[\&quot;3123586\&quot;, \&quot;3123586\&quot;]&quot;</span>
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;rejectedPlans&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token string">&quot;ok&quot;</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span> 
+    <span class="token string">&quot;operationTime&quot;</span> <span class="token operator">:</span> <span class="token function">Timestamp</span><span class="token punctuation">(</span><span class="token number">1595901492</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token string">&quot;$clusterTime&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;clusterTime&quot;</span> <span class="token operator">:</span> <span class="token function">Timestamp</span><span class="token punctuation">(</span><span class="token number">1595901492</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token string">&quot;signature&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;hash&quot;</span> <span class="token operator">:</span> <span class="token function">BinData</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;a+A2mG+8toxMdEumrnQHhZ0t1gc=&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token string">&quot;keyId&quot;</span> <span class="token operator">:</span> <span class="token function">NumberLong</span><span class="token punctuation">(</span><span class="token number">6836962738317557761</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>这个时候就可以看到 Stage 就是  索引扫描了。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后编辑时间:</span> <span class="time">12/21/2020, 4:30:08 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/Lodash.html" class="prev">
+        Lodash
+      </a></span> <span class="next"><a href="/web/Mongoose.html">
+        Mongoose
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.7ba23871.js" defer></script><script src="/assets/js/4.292afecb.js" defer></script><script src="/assets/js/34.98cba678.js" defer></script>
+  </body>
+</html>
